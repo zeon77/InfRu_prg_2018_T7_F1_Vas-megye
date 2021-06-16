@@ -43,6 +43,28 @@ namespace Vasmegye
                 $"{(s.Count() > 0 ? "" : " nem")}" +
                 $"született baba!");
 
+            //9. feladat
+            Console.WriteLine("9. feladat: Statisztika (Linq)");
+            számok
+                .GroupBy(g => g.SzületésiDátum.Year)
+                .ToList()
+                .ForEach(x => Console.WriteLine($"\t{x.Key} - {x.Count()} fő"));
+
+            //9. feladat / B
+            Console.WriteLine("9. feladat: Statisztika (Dictionary)");
+            Dictionary<int, int> Stat = new Dictionary<int, int>();
+            foreach (var item in számok)
+            {
+                if (!Stat.ContainsKey(item.SzületésiDátum.Year))
+                    Stat.Add(item.SzületésiDátum.Year, 1);
+                else
+                    Stat[item.SzületésiDátum.Year]++;
+            }
+
+            foreach (var item in Stat)
+            {
+                Console.WriteLine("\t{0} - {1} fő", item.Key, item.Value);
+            }
         }
     }
 }

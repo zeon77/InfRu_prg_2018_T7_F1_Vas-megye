@@ -31,6 +31,11 @@ namespace Vasmegye
             //6.
             Console.WriteLine($"6. feladat: Fiúk száma: {számok.Where(x => x.Nem == 'f').Count()}");
 
+            //7. feladat
+            int minYear = számok.Min(x => x.SzületésiDátum.Year);
+            int maxYear = számok.Max(x => x.SzületésiDátum.Year);
+            Console.WriteLine("7. feladat: Vizsgált időszak: {0} - {1}", minYear, maxYear);
+
         }
     }
 }

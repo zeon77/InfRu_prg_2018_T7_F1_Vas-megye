@@ -29,9 +29,13 @@ namespace Vasmegye
         }
 
         //Constructor
-        public SzemélyiSzám(string sor)
+        public SzemélyiSzám(string sz)
         {
-            Azonosító = sor;
+            //4.
+            if (!CdvEll(sz))
+                throw new Exception($"Hibás a {sz} személyi azonosító!");
+            else
+                Azonosító = sz;
         }
     }
 }

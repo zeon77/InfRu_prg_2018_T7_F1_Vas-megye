@@ -10,6 +10,7 @@ namespace Vasmegye
         static void Main(string[] args)
         {
             //2., 4. feladat
+            Console.WriteLine($"2. feladat: Adatok beolvasása, tárolása");
             List<SzemélyiSzám> számok = new List<SzemélyiSzám>();
             Console.WriteLine("4. feladat: ");
             foreach (string sor in File.ReadAllLines("vas.txt"))
@@ -24,6 +25,8 @@ namespace Vasmegye
                 }
             }
 
+            //5. feladat
+            Console.WriteLine("5. feladat: Vas megyében a vizsgált évek alatt {0} csecsemő született.", számok.Count);
         }
     }
 }

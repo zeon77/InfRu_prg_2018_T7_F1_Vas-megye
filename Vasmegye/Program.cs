@@ -36,6 +36,13 @@ namespace Vasmegye
             int maxYear = számok.Max(x => x.SzületésiDátum.Year);
             Console.WriteLine("7. feladat: Vizsgált időszak: {0} - {1}", minYear, maxYear);
 
+            //8. feladat
+            var s = számok.Where(x => DateTime.IsLeapYear(x.SzületésiDátum.Year)).Where(x => x.SzületésiDátum == new DateTime(x.SzületésiDátum.Year, 2, 24));
+            Console.WriteLine(
+                $"8. feladat: Szökőnapon " +
+                $"{(s.Count() > 0 ? "" : " nem")}" +
+                $"született baba!");
+
         }
     }
 }

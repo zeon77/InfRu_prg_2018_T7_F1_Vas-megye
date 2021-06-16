@@ -27,6 +27,10 @@ namespace Vasmegye
 
             //5. feladat
             Console.WriteLine("5. feladat: Vas megyében a vizsgált évek alatt {0} csecsemő született.", számok.Count);
+
+            //6.
+            Console.WriteLine($"6. feladat: Fiúk száma: {számok.Where(x => x.Nem == 'f').Count()}");
+
         }
     }
 }

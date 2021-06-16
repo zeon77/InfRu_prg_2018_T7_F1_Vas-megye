@@ -9,7 +9,13 @@ namespace Vasmegye
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //2. feladat
+            List<SzemélyiSzám> számok = new List<SzemélyiSzám>();
+            foreach (string sor in File.ReadAllLines(@"vas.txt"))
+            {
+                    számok.Add(new SzemélyiSzám(sor));
+            }
+
         }
     }
 }

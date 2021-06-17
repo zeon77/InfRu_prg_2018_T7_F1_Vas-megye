@@ -25,10 +25,7 @@ namespace Vasmegye
                 Sum += int.Parse(sz[i].ToString()) * (sz.Length - 1 - i);
             }
 
-            if (Sum % sz.Length == int.Parse(sz[sz.Length - 1].ToString()))
-                return true;
-
-            return false;
+            return Sum % sz.Length == int.Parse(sz[sz.Length - 1].ToString());
         }
 
         //Constructor
